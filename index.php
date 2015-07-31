@@ -10,10 +10,6 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="assets/vender/intl-tel-input/css/intlTelInput.css">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="assets/vender/intl-tel-input/js/intlTelInput.min.js"></script>
-    <script src="assets/js/contact-form.js"></script>
 	<script>
 		function show(shown, hidden) {
 		  document.getElementById(shown).style.display='block';
@@ -196,6 +192,10 @@
 		</nav>
 	</footer>
 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="assets/vender/intl-tel-input/js/intlTelInput.min.js"></script>
+    <script src="assets/js/contact-form.js"></script>
 </body>
 
 </html>
