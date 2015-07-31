@@ -183,10 +183,10 @@
 					<p>&copy; HastApp 2014-2015</p>
 				</div>	
 				<div class="navbar-text pull-right">
-					<a href="https://www.facebook.com/pages/HAST-Lab/1816766945216043?fref=ts" target="blank"><i class="fa fa-facebook-square fa-2x"></i></a>
-					<a href="https://twitter.com/HASTLab" target="blank"><i class="fa fa-twitter fa-2x"></i></a>
-					<a href="#"><i class="fa fa-instagram fa-2x" target="blank"></i></a>
-					<a href="#"><i class="fa fa-google-plus fa-2x" target="blank"></i></a>
+					<a href="https://www.facebook.com/pages/HAST-Lab/1816766945216043?fref=ts"><i class="fa fa-facebook-square fa-2x"></i></a>
+					<a href="https://twitter.com/HASTLab"><i class="fa fa-twitter fa-2x"></i></a>
+					<a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+					<a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
 				</div>
 			</div>
 		</nav>
