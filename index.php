@@ -37,7 +37,6 @@
 					<li><a href="#features" style="color:red">Features</a></li>
 					<li><a href="#about" style="color:red">About Us</a></li>
 					<li><a href="#signup" style="color:red">Sign Up</a></li>
-					<li><a href="#contact" style="color:red">Contact</a></li>
 				</ul>
 			</div>
 		</div><!--	End container -->
@@ -51,7 +50,6 @@
 				<div class="btn-group">
 					<a href="#" class="btn btn-lg btn-info">Download App</a>
 					<a href="#signup" class="btn btn-lg btn-default">Sign Up</a>
-					<a href="#contact" class="btn btn-lg btn-info">Contact us</a>
 				</div>
 			</div> <!-- End container-->
 	</div> <!-- End Jumbotron -->
