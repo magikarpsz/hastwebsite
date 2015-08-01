@@ -1,29 +1,4 @@
-<?php
 
-	if(isset($_POST['submit'])){
-
-	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-	$server = $url["host"];
-	$username = $url["user"];
-	$password = $url["pass"];
-	$db = substr($url["path"], 1);
-
-	$conn = new mysqli($server, $username, $password, $db);
-
-	if ($conn->connect_error) {
-    	die("Connection failed: " . $conn->connect_error);
-	}
-
-	$name = $_POST['name'];
-	$email = $_POST['email'];
-
-	$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
-
-	$conn->close();
-
-	}
-?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -190,7 +165,7 @@
 						<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
 					</div>
 
-					<input type="submit" value="Sign up" class="btn btn-danger" id="submit" name="submit">
+					<input type="submit" value="Sign up" class="btn btn-danger" id="submit" name="submit" onclick="return show("submitform", "form")">
 				</form>
 
 				<div class="" id="submitform" style="display:none">
