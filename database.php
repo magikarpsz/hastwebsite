@@ -14,7 +14,7 @@
 	}
 
 	$sql = "CREATE TABLE users(
-		id INT PRIMARY KEY AUTO_INCREMENT,
+		id INT AUTO_INCREMENT PRIMARY KEY,
 		name VARCHAR(30),
 		email VARCHAR(50)
 		)";
@@ -22,7 +22,7 @@
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 
-	$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
+	$sql = "INSERT INTO table1 (name, email) VALUES ('$name', '$email')";
 
 	$conn->close();
 	

@@ -14,8 +14,26 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="assets/vender/intl-tel-input/js/intlTelInput.min.js"></script>
     <script src="assets/js/contact-form.js"></script>
-	<script> function show(shown, hidden) {document.getElementById(shown).style.display='block'; document.getElementById(hidden).style.display='none'; return false;}</script>
-	<script> $(function(){ $('#form').on('submit', function(e){ e.preventDefault(); $.ajax({ url: "database.php", type: 'POST', data: $('#form').serialize(), success: show('submitform','form')});});});</script>
+	<script>
+		function show(shown, hidden) {
+		  document.getElementById(shown).style.display='block';
+		  document.getElementById(hidden).style.display='none';
+		  return false;
+		}
+	</script>
+	<script>
+					$(function(){
+					    $('#form').on('submit', function(e){
+					        e.preventDefault();
+					        $.ajax({
+					            url: "database.php", //this is the submit URL
+					            type: 'POST', //or POST
+					            data: $('#form').serialize(),
+					            success: show('submitform','form')
+					        });
+					    });
+					});
+					</script>
 </head>
 
 <body>
@@ -148,7 +166,7 @@
 				<h3>Sign up for more updates!</h3>
 				<p>Enter your name and email.</p>
 
-				<form action="" class="form-inline centered" id="form" role="form" method="post">
+				<form class="form-inline centered" id="form" role="form">
 					<div class="form-group">
 						<label for="name">Name</label>
 						<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
@@ -159,7 +177,8 @@
 						<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
 					</div>
 
-					<button type="submit" class="btn btn-danger">Sign up</button>
+					<input type="submit" value="Sign up" class="btn btn-danger">
+
 				</form>
 
 				<div class="" id="submitform" style="display:none">
