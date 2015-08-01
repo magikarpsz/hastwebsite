@@ -154,7 +154,7 @@
 				<h3>Sign up for more updates!</h3>
 				<p>Enter your name and email.</p>
 
-				<form class="form-inline centered" id="form" role="form" method="post" action="">
+				<form action="database.php" class="form-inline centered" id="form" role="form" method="post">
 					<div class="form-group">
 						<label for="name">Name</label>
 						<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
@@ -165,7 +165,7 @@
 						<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
 					</div>
 
-					<input type="submit" value="Sign up" class="btn btn-danger" id="submit" name="submit" onclick="return show("submitform", "form")">
+					<input type="submit" value="Sign up" class="btn btn-danger" id="submit" name="submit" onclick="return show(submitform, form)">
 				</form>
 
 				<div class="" id="submitform" style="display:none">
