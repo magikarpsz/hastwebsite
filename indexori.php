@@ -1,3 +1,36 @@
+<?php
+
+	if(isset($_POST['submit'])){
+
+	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+	$server = $url["host"];
+	$username = $url["user"];
+	$password = $url["pass"];
+	$db = substr($url["path"], 1);
+
+	$conn = new mysqli($server, $username, $password, $db);
+
+	if ($conn->connect_error) {
+    	die("Connection failed: " . $conn->connect_error);
+	}
+
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+
+	$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
+	if($conn->query($sql) === TRUE){
+		echo "Data entered into table";
+	}
+	else{
+		echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+
+	$conn->close();
+
+	}
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -21,19 +54,6 @@
 		  return false;
 		}
 	</script>
-	<script>
-					$(function(){
-					    $('#form').on('submit', function(e){
-					        e.preventDefault();
-					        $.ajax({
-					            url: "database.php", //this is the submit URL
-					            type: 'POST', //or POST
-					            data: $('#form').serialize(),
-					            success: show('submitform','form')
-					        });
-					    });
-					});
-					</script>
 </head>
 
 <body>
@@ -166,7 +186,7 @@
 				<h3>Sign up for more updates!</h3>
 				<p>Enter your name and email.</p>
 
-				<form action="" class="form-inline centered" id="form" role="form" method="post">
+				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="form-inline centered" id="form" role="form" method="post">
 					<div class="form-group">
 						<label for="name">Name</label>
 						<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
@@ -177,7 +197,7 @@
 						<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
 					</div>
 
-					<input type="submit" value="Sign up" class="btn btn-danger">
+					<input type="submit" value="Sign up" class="btn btn-danger" name="submit">
 
 				</form>
 
