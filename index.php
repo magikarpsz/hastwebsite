@@ -1,35 +1,3 @@
-<?php
-
-	if(isset($_POST['submit'])){
-
-	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-	$server = $url["host"];
-	$username = $url["user"];
-	$password = $url["pass"];
-	$db = substr($url["path"], 1);
-
-	$conn = new mysqli($server, $username, $password, $db);
-
-	if ($conn->connect_error) {
-    	die("Connection failed: " . $conn->connect_error);
-	}
-
-	$name = $_POST['name'];
-	$email = $_POST['email'];
-
-	$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
-	if($conn->query($sql) === TRUE){
-		$message = "Thank you for signing up with us!";
-	}
-	else{
-		echo "Error: " . $sql . "<br>" . $conn->error;
-	}
-
-	$conn->close();
-
-	}
-?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -185,7 +153,7 @@
 				<h3>Sign up for more updates!</h3>
 				<p>Enter your name and email.</p>
 
-				<form class="form-inline centered" id="form" role="form" method="post">
+				<form class="form-inline centered" id="form" role="form" method="post" action="">
 					<div class="form-group">
 						<label for="name">Name</label>
 						<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
@@ -229,12 +197,34 @@
 			</div>
 		</nav>
 	</footer>
-
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="assets/vender/intl-tel-input/js/intlTelInput.min.js"></script>
-    <script src="assets/js/contact-form.js"></script>
 </body>
 
 </html>
+
+<?php
+
+	if(isset($_POST['submit'])){
+
+	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+	$server = $url["host"];
+	$username = $url["user"];
+	$password = $url["pass"];
+	$db = substr($url["path"], 1);
+
+	$conn = new mysqli($server, $username, $password, $db);
+
+	if ($conn->connect_error) {
+    	die("Connection failed: " . $conn->connect_error);
+	}
+
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+
+	$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
+
+	$conn->close();
+
+	}
+?>
  
