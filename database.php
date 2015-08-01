@@ -19,10 +19,23 @@
 		email VARCHAR(50)
 		)";
 
+	if($conn->query($sql) === TRUE){
+		echo "Table has been created";
+	}
+	else{
+		echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 
-	$sql = "INSERT INTO table1 (name, email) VALUES ('$name', '$email')";
+	$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
+	if($conn->query($sql) === TRUE){
+		echo "Data entered into table";
+	}
+	else{
+		echo "Error: " . $sql . "<br>" . $conn->error;
+	}
 
 	$conn->close();
 	
