@@ -23,8 +23,7 @@
 	$email = $_POST['email'];
 
 	$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
-	
+
 	$conn->close();
 	
 ?>
-
