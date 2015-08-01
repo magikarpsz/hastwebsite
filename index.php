@@ -196,7 +196,7 @@
 						<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
 					</div>
 
-					<input type="submit" value="Sign up" class="btn btn-danger" name="submit">
+					<input type="submit" value="Sign up" class="btn btn-danger" name="submit" onclick="return show(submitform, form)">
 
 				</form>
 
