@@ -30,7 +30,6 @@
 
 	}
 ?>
-
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -186,7 +185,7 @@
 				<h3>Sign up for more updates!</h3>
 				<p>Enter your name and email.</p>
 
-				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="form-inline centered" id="form" role="form" method="post">
+				<form action="" class="form-inline centered" id="form" role="form" method="post">
 					<div class="form-group">
 						<label for="name">Name</label>
 						<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
