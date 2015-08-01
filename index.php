@@ -20,7 +20,7 @@
 
 	$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
 	if($conn->query($sql) === TRUE){
-		echo "Data entered into table";
+		$message = "Thank you for signing up with us!";
 	}
 	else{
 		echo "Error: " . $sql . "<br>" . $conn->error;
@@ -196,7 +196,7 @@
 						<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
 					</div>
 
-					<input type="submit" value="Sign up" class="btn btn-danger" name="submit" onclick="return show(submitform, form)">
+					<input type="submit" value="Sign up" class="btn btn-danger" name="submit" onclick="return show("submitform", "form")">
 
 				</form>
 
