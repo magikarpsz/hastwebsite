@@ -1,3 +1,29 @@
+<?php
+
+	if(isset($_POST['submit'])){
+
+	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+	$server = $url["host"];
+	$username = $url["user"];
+	$password = $url["pass"];
+	$db = substr($url["path"], 1);
+
+	$conn = new mysqli($server, $username, $password, $db);
+
+	if ($conn->connect_error) {
+    	die("Connection failed: " . $conn->connect_error);
+	}
+
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+
+	$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
+
+	$conn->close();
+
+	}
+?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -149,7 +175,7 @@
 	<!-- Sign up -->
 	<div class="container">
 		<section>
-			<div class="page-header text-center" id="signup">
+			<div class="page-header text-center" id="signup" action="index.php">
 				<h3>Sign up for more updates!</h3>
 				<p>Enter your name and email.</p>
 
@@ -201,30 +227,4 @@
 
 </html>
 
-<?php
-
-	if(isset($_POST['submit'])){
-
-	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-	$server = $url["host"];
-	$username = $url["user"];
-	$password = $url["pass"];
-	$db = substr($url["path"], 1);
-
-	$conn = new mysqli($server, $username, $password, $db);
-
-	if ($conn->connect_error) {
-    	die("Connection failed: " . $conn->connect_error);
-	}
-
-	$name = $_POST['name'];
-	$email = $_POST['email'];
-
-	$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
-
-	$conn->close();
-
-	}
-?>
  
