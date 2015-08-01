@@ -13,19 +13,6 @@
     	die("Connection failed: " . $conn->connect_error);
 	}
 
-	$sql = "CREATE TABLE users(
-		id INT AUTO_INCREMENT PRIMARY KEY,
-		name VARCHAR(30),
-		email VARCHAR(50)
-		)";
-
-	if($conn->query($sql) === TRUE){
-		echo "Table has been created";
-	}
-	else{
-		echo "Error: " . $sql . "<br>" . $conn->error;
-	}
-
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 
