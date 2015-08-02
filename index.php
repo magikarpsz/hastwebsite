@@ -1,4 +1,5 @@
 <?php
+
 			$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 			$server = $url["host"];
@@ -12,13 +13,13 @@
 		    	die("Connection failed: " . $conn->connect_error);
 			}
 
-			if (isset($_POST['submit']){
+			if (isset($_POST["submit"]){
 				$name = $_POST['name'];
 				$email = $_POST['email'];
 
 				$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
 				if($conn->query($sql) === TRUE){
-					show('submitform', 'form');
+					echo "Success";
 				}
 				else{
 					echo "Error: " . $sql . "<br>" . $conn->error;
