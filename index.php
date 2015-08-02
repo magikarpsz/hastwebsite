@@ -13,7 +13,6 @@
 		    	die("Connection failed: " . $conn->connect_error);
 			}
 
-			if (isset($_POST["submit"]){
 				$name = $_POST['name'];
 				$email = $_POST['email'];
 
@@ -24,7 +23,6 @@
 				else{
 					echo "Error: " . $sql . "<br>" . $conn->error;
 				}
-			}
 			
 			$conn->close();
 		
