@@ -19,7 +19,7 @@
 
 				$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
 				if($conn->query($sql) === TRUE){
-					$result = '<div class="alert alert-success fade in"><a href="" class="close" data-dismiss="alert">&times;</a>Thanks for the submission!</div>';
+					$result = '<div class="alert alert-success fade in"><a href="" class="close" data-dismiss="alert">&times;</a>Thank you for signing up with us! We will keep you updated on the latest!</div>';
 				}
 				else{
 					$result = '<div class="alert alert-danger fade in"><a href="" class="close" data-dismiss="alert">&times;</a>There was an error with your submission!</div>';
@@ -216,9 +216,9 @@
 					<p>&copy; HastApp 2014-2015</p>
 				</div>	
 				<div class="navbar-text pull-right heroku-footer-links">
-					<a class="heroku-footer-icon-facebook" href="https://www.facebook.com/pages/HAST-Lab/1816766945216043?fref=ts" target="_blank">Facebook</a>
-					<a class="heroku-footer-icon-twitter" href="https://twitter.com/HASTLab" target="_blank">Twitter</a>
-					<a class="heroku-footer-icon-instagram" href="#"><i class="fa fa-instagram fa-2x"></i>Instagram</a>
+					<a class="heroku-footer-icon-facebook" href="https://www.facebook.com/pages/HAST-Lab/1816766945216043?fref=ts" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+					<a class="heroku-footer-icon-twitter" href="https://twitter.com/HASTLab" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+					<a class="heroku-footer-icon-instagram" href="#"><i class="fa fa-instagram fa-2x"></i></a>
 					<a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
 					<!-- <i class="fa fa-facebook-square fa-2x"></i> 
 						<i class="fa fa-twitter fa-2x"></i>-->
