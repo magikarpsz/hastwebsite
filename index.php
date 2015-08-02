@@ -13,6 +13,7 @@
 		    	die("Connection failed: " . $conn->connect_error);
 			}
 
+			if(isset($_POST["submit"])){
 				$name = $_POST['name'];
 				$email = $_POST['email'];
 
@@ -23,7 +24,7 @@
 				else{
 					$result = '<div class="alert alert-danger fade in"><a href="" class="close" data-dismiss="alert">&times;</a>There was an error with your submission!</div>';
 				}
-			
+			}
 			$conn->close();	
 ?>
 
