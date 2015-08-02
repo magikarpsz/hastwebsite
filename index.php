@@ -1,5 +1,5 @@
 <?php
-		if ($_SERVER["REQUEST_METHOD"] == "POST"){
+		if (isset($_POST['submit']){
 			$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 			$server = $url["host"];
@@ -82,7 +82,7 @@
 				<h1 style="color:white">HEALTH. SUPPORT. YOUR FAMILY</h1>
 				<p style="color:white">Hast, the easiest way to connect and view the health of your family every day.</p>
 				<div class="btn-group">
-					<a href="#" class="btn btn-lg btn-info">Download App</a>
+					<a href="" class="btn btn-lg btn-info">Download App</a>
 					<a href="#signup" class="btn btn-lg btn-default">Sign Up</a>
 				</div>
 			</div> <!-- End container-->
@@ -183,7 +183,7 @@
 				<h3>Sign up for more updates!</h3>
 				<p>Enter your name and email.</p>
 
-				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="form-inline centered" id="form" role="form" method="post">
+				<form action="" class="form-inline centered" id="form" role="form" method="post">
 					<div class="form-group">
 						<label for="name">Name</label>
 						<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
