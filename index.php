@@ -18,14 +18,13 @@
 
 				$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
 				if($conn->query($sql) === TRUE){
-					echo "Success";
+					$result = '<div class="alert alert-success fade in"><a href="" class="close" data-dismiss="alert">&times;</a>Thanks for the submission!</div>';
 				}
 				else{
-					echo "Error: " . $sql . "<br>" . $conn->error;
+					$result = '<div class="alert alert-danger fade in"><a href="" class="close" data-dismiss="alert">&times;</a>There was an error with your submission!</div>';
 				}
 			
-			$conn->close();
-		
+			$conn->close();	
 ?>
 
 <!DOCTYPE HTML>
@@ -63,7 +62,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="#" class="navbar-brand" style="color:red">Hast</a>
+				<a href="" class="navbar-brand" style="color:red">Hast</a>
 			</div> <!-- Navbar header -->
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 			<a href="" class="btn btn-info navbar-btn navbar-right">Download</a>
@@ -79,6 +78,7 @@
 	<!-- Jumbotron -->
 	<div class="jumbotron" style="background-color:brown">
 			<div class="container text-center">
+				<?php echo $result; ?>
 				<h1 style="color:white">HEALTH. SUPPORT. YOUR FAMILY</h1>
 				<p style="color:white">Hast, the easiest way to connect and view the health of your family every day.</p>
 				<div class="btn-group">
@@ -194,7 +194,7 @@
 						<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
 					</div>
 
-					<input type="submit" value="Sign up" class="btn btn-danger" id="submit" name="submit">
+					<input type="submit" value="Sign up" class="btn btn-danger" id="submit" name="submit" >
 				</form>
 
 				<div class="" id="submitform" style="display:none">
