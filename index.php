@@ -1,33 +1,3 @@
-<?php
-
-			$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-			$server = $url["host"];
-			$username = $url["user"];
-			$password = $url["pass"];
-			$db = substr($url["path"], 1);
-
-			$conn = new mysqli($server, $username, $password, $db);
-
-			if ($conn->connect_error) {
-		    	die("Connection failed: " . $conn->connect_error);
-			}
-
-			if(isset($_POST["submit"])){
-				$name = $_POST['name'];
-				$email = $_POST['email'];
-
-				$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
-				if($conn->query($sql) === TRUE){
-					$result = '<div class="alert alert-success fade in"><a href="" class="close" data-dismiss="alert">&times;</a>Thank you for signing up with us! We will keep you updated on the latest!</div>';
-				}
-				else{
-					$result = '<div class="alert alert-danger fade in"><a href="" class="close" data-dismiss="alert">&times;</a>There was an error with your submission!</div>';
-				}
-			}
-			$conn->close();	
-?>
-
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -40,17 +10,12 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="assets/vender/intl-tel-input/css/intlTelInput.css">
-	<script src="http://code.jquery.com/jquery-latest.min.js" ></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="assets/vender/intl-tel-input/js/intlTelInput.min.js"></script>
     <script src="assets/js/contact-form.js"></script>
-	<script>
-		function show(shown, hidden) {
-		  document.getElementById(shown).style.display='block';
-		  document.getElementById(hidden).style.display='none';
-		  return false;
-		}
-	</script>
+	<script> function show(shown, hidden) {document.getElementById(shown).style.display='block'; document.getElementById(hidden).style.display='none'; return false;} </script>
+	<script> $(function submitForm(){$("#form").on('submit', function(e){e.preventDefault();$.ajax({url: 'database.php', type: 'POST', data: $('#form').serialize(), success: show('submitform','form')});});}); </script>
 </head>
 
 <body>
@@ -79,12 +44,12 @@
 	<!-- Jumbotron -->
 	<div class="jumbotron" style="background-color:brown">
 			<div class="container text-center">
-				<?php echo $result; ?>
 				<h1 style="color:white">HEALTH. SUPPORT. YOUR FAMILY</h1>
 				<p style="color:white">Hast, the easiest way to connect and view the health of your family every day.</p>
 				<div class="btn-group">
 					<a href="" class="btn btn-lg btn-info">Download App</a>
 					<a href="#signup" class="btn btn-lg btn-default">Sign Up</a>
+					<a href="#contact" class="btn btn-lg btn-info">Contact us</a>
 				</div>
 			</div> <!-- End container-->
 	</div> <!-- End Jumbotron -->
@@ -184,10 +149,10 @@
 				<h3>Sign up for more updates!</h3>
 				<p>Enter your name and email.</p>
 
-				<form action="" class="form-inline centered" id="form" role="form" method="post">
+				<form class="form-inline centered" id="form" role="form" method="post">
 					<div class="form-group">
 						<label for="name">Name</label>
-						<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+						<input type="text" class="form-control" name="name" id="name" placeholder="Enter your name">
 					</div>
 
 					<div class="form-group">
@@ -195,7 +160,8 @@
 						<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
 					</div>
 
-					<input type="submit" value="Sign up" class="btn btn-danger" id="submit" name="submit" >
+					<input type="submit" id="submit" name="submit" value="Sign up" >
+					<!-- <button type="submit" class="btn btn-danger" name="submit" id="submit">Sign up</button> -->
 				</form>
 
 				<div class="" id="submitform" style="display:none">
@@ -215,20 +181,16 @@
 				<div class="navbar-text pull-left">
 					<p>&copy; HastApp 2014-2015</p>
 				</div>	
-				<div class="navbar-text pull-right heroku-footer-links">
-					<a class="heroku-footer-icon-facebook" href="https://www.facebook.com/pages/HAST-Lab/1816766945216043?fref=ts" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
-					<a class="heroku-footer-icon-twitter" href="https://twitter.com/HASTLab" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
-					<a class="heroku-footer-icon-instagram" href="#"><i class="fa fa-instagram fa-2x"></i></a>
-					<a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
-					<!-- <i class="fa fa-facebook-square fa-2x"></i> 
-						<i class="fa fa-twitter fa-2x"></i>-->
-
+				<div class="navbar-text pull-right">
+					<a href="https://www.facebook.com/pages/HAST-Lab/1816766945216043?fref=ts" target="blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+					<a href="https://twitter.com/HASTLab" target="blank"><i class="fa fa-twitter fa-2x"></i></a>
+					<a href=""><i class="fa fa-instagram fa-2x" target="blank"></i></a>
+					<a href=""><i class="fa fa-google-plus fa-2x" target="blank"></i></a>
 				</div>
 			</div>
 		</nav>
 	</footer>
+
 </body>
 
 </html>
-
- 

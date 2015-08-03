@@ -14,13 +14,8 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="assets/vender/intl-tel-input/js/intlTelInput.min.js"></script>
     <script src="assets/js/contact-form.js"></script>
-	<script>
-		function show(shown, hidden) {
-		  document.getElementById(shown).style.display='block';
-		  document.getElementById(hidden).style.display='none';
-		  return false;
-		}
-	</script>
+	<script> function show(shown, hidden) {document.getElementById(shown).style.display='block'; document.getElementById(hidden).style.display='none'; return false;} </script>
+	<script> $(function submitForm(){$("#form").on('submit', function(e){e.preventDefault();$.ajax({url: 'database.php', type: 'POST', data: $('#form').serialize(), success: show('submitform','form')});});}); </script>
 </head>
 
 <body>
@@ -33,7 +28,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="#" class="navbar-brand" style="color:red">Hast</a>
+				<a href="" class="navbar-brand" style="color:red">Hast</a>
 			</div> <!-- Navbar header -->
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 			<a href="" class="btn btn-info navbar-btn navbar-right">Download</a>
@@ -41,7 +36,6 @@
 					<li><a href="#features" style="color:red">Features</a></li>
 					<li><a href="#about" style="color:red">About Us</a></li>
 					<li><a href="#signup" style="color:red">Sign Up</a></li>
-					<li><a href="#contact" style="color:red">Contact</a></li>
 				</ul>
 			</div>
 		</div><!--	End container -->
@@ -53,7 +47,7 @@
 				<h1 style="color:white">HEALTH. SUPPORT. YOUR FAMILY</h1>
 				<p style="color:white">Hast, the easiest way to connect and view the health of your family every day.</p>
 				<div class="btn-group">
-					<a href="#" class="btn btn-lg btn-info">Download App</a>
+					<a href="" class="btn btn-lg btn-info">Download App</a>
 					<a href="#signup" class="btn btn-lg btn-default">Sign Up</a>
 					<a href="#contact" class="btn btn-lg btn-info">Contact us</a>
 				</div>
@@ -155,10 +149,10 @@
 				<h3>Sign up for more updates!</h3>
 				<p>Enter your name and email.</p>
 
-				<form action="" class="form-inline centered" id="form" role="form">
+				<form class="form-inline centered" id="form" role="form" method="post">
 					<div class="form-group">
 						<label for="name">Name</label>
-						<input type="text" class="form-control" id="name" placeholder="Enter your name">
+						<input type="text" class="form-control" name="name" id="name" placeholder="Enter your name">
 					</div>
 
 					<div class="form-group">
@@ -166,7 +160,8 @@
 						<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
 					</div>
 
-					<button type="submit" class="btn btn-danger" onclick="return show('submitform','form');">Sign up</button>
+					<input type="submit" id="submit" name="submit" value="Sign up" >
+					<!-- <button type="submit" class="btn btn-danger" name="submit" id="submit">Sign up</button> -->
 				</form>
 
 				<div class="" id="submitform" style="display:none">
@@ -189,8 +184,8 @@
 				<div class="navbar-text pull-right">
 					<a href="https://www.facebook.com/pages/HAST-Lab/1816766945216043?fref=ts" target="blank"><i class="fa fa-facebook-square fa-2x"></i></a>
 					<a href="https://twitter.com/HASTLab" target="blank"><i class="fa fa-twitter fa-2x"></i></a>
-					<a href="#"><i class="fa fa-instagram fa-2x" target="blank"></i></a>
-					<a href="#"><i class="fa fa-google-plus fa-2x" target="blank"></i></a>
+					<a href=""><i class="fa fa-instagram fa-2x" target="blank"></i></a>
+					<a href=""><i class="fa fa-google-plus fa-2x" target="blank"></i></a>
 				</div>
 			</div>
 		</nav>
