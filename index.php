@@ -49,7 +49,6 @@
 				<div class="btn-group">
 					<a href="" class="btn btn-lg btn-info">Download App</a>
 					<a href="#signup" class="btn btn-lg btn-default">Sign Up</a>
-					<a href="#contact" class="btn btn-lg btn-info">Contact us</a>
 				</div>
 			</div> <!-- End container-->
 	</div> <!-- End Jumbotron -->
@@ -73,25 +72,30 @@
 		</div> <!-- End of page header-->
 
 		<div class="row">
-			<div class="col-sm-3 col-sm-offset-1">
-				<img src="login.jpg" class="img-responsive" alt="image" width="80%">
+			<div class="col-sm-4">
+				<img src="login.jpg" class="img-responsive" alt="image" width="70%">
 			</div>
 
-			<div class="col-sm-3 col-sm-offset-1">
-				<img src="registerfam.jpg" class="img-responsive" alt="image" width="80%">
+			<div class="col-sm-4">
+				<img src="familyregistration.png" class="img-responsive" alt="image" width="70%">
 			</div>
 
-			<div class="col-sm-3 col-sm-offset-1" style="display: block">
-				<img src="successreg.jpg" class="img-responsive" alt="image" width="80%">
+			<div class="col-sm-4">
+				<img src="successregistration.png" class="img-responsive" alt="image" width="70%">
 			</div>
 		</div><!-- End of row -->
-
+		<br>
 		<div class="row">
-			<div class="col-sm-5 col-sm-offset-2" style="display:block">
-				<img src="contact.jpg" class="img-responsive" alt="img" width="50%">
+			<div class="col-sm-4">
+				<img src="message.png" class="img-responsive" alt="img" width="70%">
 			</div>
-			<div class="col-sm-5" style="display:block">
-				<img src="summary.jpeg" class="img-responsive" alt="img" width="50%">
+
+			<div class="col-sm-4">
+				<img src="contactlist.png" class="img-responsive" alt="img" width="70%">
+			</div>
+
+			<div class="col-sm-4">
+				<img src="summary.jpeg" class="img-responsive" alt="img" width="70%">
 			</div>
 		</div>
 	</section>
