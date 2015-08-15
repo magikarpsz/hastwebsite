@@ -112,7 +112,7 @@
 				<div class="row text-center">
 					<div class="col-sm-4">
 						<img src="blank.jpg" class="img-circle"/>
-						<br></br>
+						<br></br>	
 						<p><strong>Ni Yao</strong><br>Chief Executive Officer</br></p>
 					</div>
 
@@ -163,7 +163,7 @@
 						<label for="email">Email Address</label>
 						<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
 					</div>
-
+					
 					<button type="submit" class="btn btn-danger" name="submit" id="submit">Sign up</button>
 				</form>
 
