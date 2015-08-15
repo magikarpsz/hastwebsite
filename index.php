@@ -77,21 +77,21 @@
 			</div>
 
 			<div class="col-sm-4">
-				<img src="familyregistration.png" class="img-responsive" alt="image" width="70%">
+				<img src="familyregistration.jpg" class="img-responsive" alt="image" width="70%">
 			</div>
 
 			<div class="col-sm-4">
-				<img src="successregistration.png" class="img-responsive" alt="image" width="70%">
+				<img src="successregistration.jpg" class="img-responsive" alt="image" width="70%">
 			</div>
 		</div><!-- End of row -->
 		<br>
 		<div class="row">
 			<div class="col-sm-4">
-				<img src="message.png" class="img-responsive" alt="img" width="70%">
+				<img src="message.jpg" class="img-responsive" alt="img" width="70%">
 			</div>
 
 			<div class="col-sm-4">
-				<img src="contactlist.png" class="img-responsive" alt="img" width="70%">
+				<img src="contactlist.jpg" class="img-responsive" alt="img" width="70%">
 			</div>
 
 			<div class="col-sm-4">
@@ -164,8 +164,7 @@
 						<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
 					</div>
 
-					<input type="submit" id="submit" name="submit" value="Sign up" >
-					<!-- <button type="submit" class="btn btn-danger" name="submit" id="submit">Sign up</button> -->
+					<button type="submit" class="btn btn-danger" name="submit" id="submit">Sign up</button>
 				</form>
 
 				<div class="" id="submitform" style="display:none">
