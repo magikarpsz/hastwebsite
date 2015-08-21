@@ -36,6 +36,7 @@
 					<li><a href="#features" style="color:red">Features</a></li>
 					<li><a href="#about" style="color:red">About Us</a></li>
 					<li><a href="#signup" style="color:red">Sign Up</a></li>
+					<li><a href="#contactus" style="color:red">Contact Us</a></li>
 				</ul>
 			</div>
 		</div><!--	End container -->
@@ -112,34 +113,34 @@
 				<div class="row text-center">
 					<div class="col-sm-4">
 						<img src="blank.jpg" class="img-circle"/>
-						<br></br>	
-						<p><strong>Ni Yao</strong><br>Chief Executive Officer</br></p>
+						<br><br>	
+						<p><strong>Ni Yao</strong><br>Chief Executive Officer<br>ni@hastlab.com</p>
 					</div>
 
 					<div class="col-sm-4">
 						<img src="blank.jpg" class="img-circle"/>
-						<br></br>
-						<p><strong>Xue Bin Zhao</strong><br>Chief Technology Officer</br></p>
+						<br><br>
+						<p><strong>Xue Bin Zhao</strong><br>Chief Technology Officer<br>xbin@hastlab.com</p>
 					</div>
 
 					<div class="col-sm-4">
 						<img src="blank.jpg" class="img-circle"/>
-						<br></br>
-						<p><strong>Bin Xu</strong><br>President</br></p>
+						<br><br>
+						<p><strong>Bin Xu</strong><br>President<br>bin@hastlab.com</p>
 					</div>
 				</div>
 				<br><br>
 				<div class="row text-center">
 					<div class="col-sm-6">
 						<img src="blank.jpg" class="img-circle"/>
-						<br></br>
-						<p><strong>Benny Tan</strong><br>Technical Advisor</br></p>
+						<br><br>
+						<p><strong>Benny Tan</strong><br>Technical Advisor<br>benny@hastlab.com</p>
 					</div>
 
 					<div class="col-sm-6">
 						<img src="blank.jpg" class="img-circle"/>
 						<br></br>
-						<p><strong>Karla Parraga</strong><br>Outreach Specialist</br></p>
+						<p><strong>Karla Parraga</strong><br>Outreach Specialist<br>karla@hastlab.com</p>
 					</div>
 				</div>
 			</div>
@@ -175,6 +176,21 @@
 		</section>
 	</div>
 	<!-- Sign Up -->
+
+	<!-- Contact us form -->
+	<div class="container">
+		<section>
+			<div class="page-header" id="contactus">
+				<h2>Contact Us! <small>Contact us for more details.</small></h2>
+			</div>
+
+				<div class="col-lg-12">
+					<p>Shoot us an email or follow us on facebook, twitter, or instagram!</p>
+
+					<strong>Email: </strong><a href="mailto:info@hastlab.com">info@hastlab.com</a>
+				</div>
+		</section>
+	</div><!-- End of Contact Us -->
 	
 
 	<!-- Footer -->
